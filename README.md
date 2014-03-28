@@ -1,6 +1,8 @@
 This is the bootstrapping magic for the base arch image that will be used by DAC
 (and possibly other cloudbees things).
 
+This is currently pushed to https://index.docker.io/u/michaelneale/archbase/
+
 You will want to ensure you have the latest https://raw.githubusercontent.com/tokland/arch-bootstrap/master/arch-bootstrap.sh
 May need to apply fixes as per: https://github.com/tokland/arch-bootstrap/issues/5
 
