@@ -3,9 +3,19 @@ This is the bootstrapping magic for the base arch image that will be used by DAC
 
 This is currently pushed to https://index.docker.io/u/michaelneale/archbase/
 
+
+To bootstrap this image: 
+
 You will want to ensure you have the latest https://raw.githubusercontent.com/tokland/arch-bootstrap/master/arch-bootstrap.sh
 May need to apply fixes as per: https://github.com/tokland/arch-bootstrap/issues/5
 
+Quick way: 
+
+    ./bootstrap-image
+
+This will leave you with archbase in your local docker image repository. You can then tweak and push it. 
+
+The slightly longer way: 
 
 1) setup bootstrap image and import into docker - this will give you "boot1" - only really need do this once:
 

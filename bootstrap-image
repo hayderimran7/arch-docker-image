@@ -1,0 +1,5 @@
+#!/bin/sh
+rm -rf boot1
+./arch-bootstrap.sh boot1
+cp pacman.conf ./boot1/etc/pacman.conf
+tar -C boot1 -c . | docker import - archbase
