@@ -20,3 +20,7 @@ May need to apply fixes as per: https://github.com/tokland/arch-bootstrap/issues
 3) finally push
 
     docker push michaelneale/archbase
+
+4) to use
+
+    docker pull michaelneale/archbase (or use FROM michaelneale/archbase in Dockerfile)
