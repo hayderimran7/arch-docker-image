@@ -13,7 +13,7 @@ RUN sed -i \
  
 ENV container docker
 EXPOSE 22
-CMD /usr/lib/systemd/systemd
+ENTRYPOINT /usr/lib/systemd/systemd
  
 # To launch in GOOD STATE:
 # docker run --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 2222:22 <REPONAME>
