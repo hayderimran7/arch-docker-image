@@ -1,18 +1,13 @@
-This is a first version that builds on the archbase. 
-I believe the archbase is flawed, but I will improve it. 
-This shows how to use something that requires systemd, and boot to systemd (when container starts, runs only systemd from docker). 
-sshd is not required - it is just to show this
-
 I was inspired by: https://registry.hub.docker.com/u/codekoala/ssh
-And its ancestor (I will use that as the basis for a more container friendly boostrapped arch). 
 
 To run: 
 docker run --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 2222:22 michaelneale/arch_sshd_systemd
 
 You may need to skip the ":ro" if it fails - as it needs to create a /sys/fs/cgroup/systemd if there isn't one on your host.
 
+TODO:
 Systemd needs cgroups - it is unpleasant in container. 
-runit would be better and not require priv mode either. 
+Runit would be better and not require priv mode either. 
 
 Watch for  https://github.com/dotcloud/docker/pull/5773  - future docker version that may not need cgroup bound in. 
 Also - no real need for sshd:  http://jpetazzo.github.io/2014/06/23/docker-ssh-considered-evil/
