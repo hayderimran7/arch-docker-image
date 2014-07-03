@@ -25,4 +25,5 @@ This will leave you with archbase in your local docker image repository. You can
 # To use
 
 See <a href="https://registry.hub.docker.com/u/cloudbees/archbase/">here</a> for instructions. This is systemd capable. 
-To add sshd - use this <a href="https://gist.github.com/michaelneale/491134409fa7a1c32119">Dockerfile</a> (make FROM say archbase or cloudbees/archbase).
+
+To add sshd - use this <a href="https://gist.github.com/michaelneale/491134409fa7a1c32119">Dockerfile</a> - which will show sshd in actoin (make FROM say archbase or cloudbees/archbase). Follow instructions <a href="https://registry.hub.docker.com/u/michaelneale/arch_sshd_systemd/">here</a> to try the pre-made sshd arch image. 
