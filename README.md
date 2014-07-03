@@ -10,7 +10,7 @@ Then systemd is tuned (bits ripped out) - devices are fixed up, and some other t
 
 This is meant to serve as a base for cloudbees arch containers - feel free to use it. 
 
-For inspiration, I looked at https://registry.hub.docker.com/u/codekoala/arch/ - which works nicely with systemd, and also has an sshd flavour: https://registry.hub.docker.com/u/codekoala/ssh/
+For inspiration, I looked at https://registry.hub.docker.com/u/codekoala/arch/ - which works nicely with systemd, and also has an sshd flavour: https://registry.hub.docker.com/u/codekoala/ssh/ - also http://rhatdan.wordpress.com/2014/04/30/running-systemd-within-a-docker-container/
 
 
 # To bootstrap this image again
