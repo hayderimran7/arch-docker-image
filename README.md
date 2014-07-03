@@ -1,36 +1,28 @@
-This is the bootstrapping magic for the base arch image that will be used by DAC
-(and possibly other cloudbees things).
+This is a minimal-ish bootstrapped arch image for docker by @michaelneale.
+It is systemd capable - and published to the docker hub as: 
 
-This is currently pushed to https://index.docker.io/u/michaelneale/archbase/
+https://registry.hub.docker.com/u/cloudbees/archbase/
+
+# How it works: 
+
+Firstly, https://wiki.archlinux.org/index.php/Archbootstrap is used - with a cut down pacman.conf. 
+Then systemd is tuned (bits ripped out) - devices are fixed up, and some other things are removed. 
+
+This is meant to serve as a base for cloudbees arch containers - feel free to use it. 
+
+For inspiration, I looked at https://registry.hub.docker.com/u/codekoala/arch/ - which works nicely with systemd, and also has an sshd flavour: https://registry.hub.docker.com/u/codekoala/ssh/
 
 
-To bootstrap this image: 
+# To bootstrap this image again
 
-You will want to ensure you have the latest https://raw.githubusercontent.com/tokland/arch-bootstrap/master/arch-bootstrap.sh
-May need to apply fixes as per: https://github.com/tokland/arch-bootstrap/issues/5
-
-Quick way: 
+You will want to ensure you have the latest https://raw.githubusercontent.com/tokland/arch-bootstrap/master/arch-bootstrap.sh from https://wiki.archlinux.org/index.php/Archbootstrap
 
     ./bootstrap-image
 
-This will leave you with archbase in your local docker image repository. You can then tweak and push it. 
+This will leave you with archbase in your local docker image repository. You can then tag it and push it (or perhaps modify it via the included Dockerfile).
 
-The slightly longer way: 
 
-1) setup bootstrap image and import into docker - this will give you "boot1" - only really need do this once:
+# To use
 
-    install -m 755 arch-bootstrap.sh /usr/local/bin/arch-bootstrap
-    arch-bootstrap boot1
-    tar -C boot1 -c . | docker import - archboot
-
-2) Build docker image (you may occasionally need to do this)
-
-    docker build -t michaelneale/archbase .
-
-3) finally push
-
-    docker push michaelneale/archbase
-
-4) to use
-
-    docker pull michaelneale/archbase (or use FROM michaelneale/archbase in Dockerfile)
+See <a href="https://registry.hub.docker.com/u/cloudbees/archbase/">here</a> for instructions. This is systemd capable. 
+To add sshd - use this <a href="https://gist.github.com/michaelneale/491134409fa7a1c32119">Dockerfile</a> (make FROM say archbase or cloudbees/archbase).
