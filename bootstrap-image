@@ -35,3 +35,4 @@ ln -sf $ROOTFS/proc/self/fd $DEV/fd
 
 
 tar -C boot1 -c . | docker import - archbase
+docker build -t cloudbees/archbase . 

@@ -1,4 +1,4 @@
-FROM michaelneale/archbase
+FROM cloudbees/archbase
  
 RUN pacman -Sqyu --noconfirm --needed openssh && \
     systemctl enable sshd
