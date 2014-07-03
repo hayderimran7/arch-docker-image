@@ -15,7 +15,7 @@ For inspiration, I looked at https://registry.hub.docker.com/u/codekoala/arch/ -
 
 # To bootstrap this image again
 
-You will want to ensure you have the latest https://raw.githubusercontent.com/tokland/arch-bootstrap/master/arch-bootstrap.sh from https://wiki.archlinux.org/index.php/Archbootstrap
+You will want to ensure you have the latest https://raw.githubusercontent.com/tokland/arch-bootstrap/master/arch-bootstrap.sh from https://wiki.archlinux.org/index.php/Archbootstrap. Works well when the bootstrap environment is arch linux itself, reasonably up to date:
 
     ./bootstrap-image
 
