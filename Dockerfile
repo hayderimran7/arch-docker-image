@@ -1,3 +1,3 @@
 FROM archbase
 ENV container docker
-CMD /usr/lib/systemd/systemd
+CMD ["/usr/lib/systemd/systemd"]
